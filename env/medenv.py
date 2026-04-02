@@ -21,7 +21,7 @@ from schemas.observation_schema import ObservationDict
 logger = logging.getLogger(__name__)
 
 _TASK_DESCRIPTION = "Assess patient and proceed through clinical pipeline"
-_TRIAGE_ACTIONS = ["flag_emergency", "classify_urgency"]
+_TRIAGE_ACTIONS = ["flag_emergency"]
 
 
 class MedEnv:

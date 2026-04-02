@@ -35,13 +35,38 @@ class PatientAgent:
         if not isinstance(case, dict):
             raise TypeError(f"case must be a dict, got {type(case).__name__}")
         self.case = case
-        # evidences may be a dict {symptom_id: value} or list — handle both
-        raw_evidences = case.get("evidences", {})
-        self.evidences: dict[str, Any] = (
-            raw_evidences if isinstance(raw_evidences, dict) else {}
+
+        # Field normalization for DDxPlus variants (uppercase or lowercase schema)
+        self.chief_complaint = (
+            case.get("initial_evidence")
+            or case.get("INITIAL_EVIDENCE")
+            or "Unknown complaint"
         )
+
+        raw_evidences = case.get("evidences") or case.get("EVIDENCES") or {}
+
+        # EVIDENCES may come as a string representation of a list in some dataset versions
+        if isinstance(raw_evidences, str):
+            try:
+                import ast
+
+                parsed = ast.literal_eval(raw_evidences)
+                if isinstance(parsed, list):
+                    raw_evidences = parsed
+            except Exception:
+                raw_evidences = []
+
+        if isinstance(raw_evidences, list):
+            # Convert list form to dict with implicit present flags
+            self.evidences = {str(item): True for item in raw_evidences}
+        elif isinstance(raw_evidences, dict):
+            self.evidences = raw_evidences
+        else:
+            self.evidences = {}
+
         logger.debug(
-            "PatientAgent initialized. Pathology: %s", case.get("pathology", "unknown")
+            "PatientAgent initialized. Pathology: %s",
+            case.get("PATHOLOGY", case.get("pathology", "unknown")),
         )
 
     # ------------------------------------------------------------------
@@ -62,13 +87,12 @@ class PatientAgent:
                 }
             }
         """
-        chief_complaint = self.case.get("initial_evidence") or "Unknown complaint"
         return {
-            "chief_complaint": str(chief_complaint),
+            "chief_complaint": str(self.chief_complaint),
             "vitals": {},  # DDxPlus does not include traditional vitals
             "profile": {
-                "age": self.case.get("age"),
-                "sex": self.case.get("sex"),
+                "age": self.case.get("age") or self.case.get("AGE"),
+                "sex": self.case.get("sex") or self.case.get("SEX"),
             },
         }
 

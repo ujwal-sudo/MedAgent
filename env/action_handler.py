@@ -27,9 +27,7 @@ class ActionHandler:
             return f"Action '{action_type}' not allowed in stage '{env.current_stage}'", -2.0, False
 
         # --- Action Routing ---
-        if action_type == "classify_urgency":
-            return self._handle_classify_urgency(env, payload)
-        elif action_type == "ask_symptom":
+        if action_type == "ask_symptom":
             return self._handle_ask_symptom(env, payload)
         elif action_type == "order_test":
             return self._handle_order_test(env, payload)
@@ -48,24 +46,29 @@ class ActionHandler:
 
     def _get_allowed_actions(self, stage: str) -> list[str]:
         if stage == "triage":
-            return ["flag_emergency", "classify_urgency"]
+            return ["flag_emergency"]
         elif stage == "diagnosis":
-            return ["ask_symptom", "order_test", "give_diagnosis", "refer", "flag_emergency"]
+            return ["ask_symptom", "order_test", "give_diagnosis", "refer"]
         elif stage == "treatment":
-            return ["prescribe", "order_test", "flag_emergency"]
+            return ["prescribe"]
         elif stage == "follow-up":
-            return ["schedule_followup", "flag_emergency"]
+            return ["schedule_followup"]
         return []
 
     # ------------------------------------------------------------------
     # Specific Handlers
     # ------------------------------------------------------------------
 
-    def _handle_classify_urgency(self, env: Any, payload: dict[str, Any]) -> Tuple[str, float, bool]:
-        """Explicit triage completion — the ONLY way to advance from triage to diagnosis."""
-        urgency_level = payload.get("urgency_level", "standard")
-        env.set_stage("diagnosis")
-        return f"Triage complete. Urgency classified as: {urgency_level}", 0.0, False
+    def _handle_flag_emergency(self, env: Any, payload: dict[str, Any]) -> Tuple[str, float, bool]:
+        flag = payload.get("flag", True)
+        reason = payload.get("reason", "No reason provided")
+        
+        if flag:
+            env.record_emergency_flagged()
+            return f"Emergency flagged! Reason: {reason}", 0.0, True
+        else:
+            env.set_stage("diagnosis")
+            return "No emergency flagged. Proceeding to diagnosis.", 0.0, False
 
     def _handle_ask_symptom(self, env: Any, payload: dict[str, Any]) -> Tuple[str, float, bool]:
         symptom = payload.get("symptom_id") or payload.get("symptom")
@@ -145,7 +148,4 @@ class ActionHandler:
             f"Specialist diagnosis: {diagnosis}"
         ), 0.0, False
 
-    def _handle_flag_emergency(self, env: Any, payload: dict[str, Any]) -> Tuple[str, float, bool]:
-        reason = payload.get("reason", "No reason provided")
-        env.record_emergency_flagged()
-        return f"Emergency flagged! Reason: {reason}", 0.0, True
+
