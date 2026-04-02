@@ -14,5 +14,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application source code
 COPY . .
 
-# Entrypoint
-CMD ["python", "main.py"]
+# Entrypoint — run Gradio app for HF Spaces
+CMD ["python", "app.py"]

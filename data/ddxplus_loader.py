@@ -12,6 +12,7 @@ Usage:
 """
 
 import logging
+import os
 from typing import Any
 
 from datasets import load_dataset
@@ -32,10 +33,12 @@ class DDxPlusLoader:
             split: Dataset split to load ("train", "validation", "test").
         """
         logger.info("Loading DDxPlus dataset from HuggingFace (split=%s, streaming=True)...", split)
+        hf_token = os.environ.get("HF_TOKEN")
         self.dataset = load_dataset(
             "aai530-group6/ddxplus",
             split=split,
-            streaming=True
+            streaming=True,
+            token=hf_token
         )
         self.iterator = iter(self.dataset)
         logger.info("Streaming dataset initialized.")

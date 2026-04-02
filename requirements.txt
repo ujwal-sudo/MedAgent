@@ -5,9 +5,10 @@ numpy>=1.26.0
 datasets>=2.18.0
 requests>=2.30.0
 
-# Server
+# Server & UI
 fastapi>=0.110.0
 uvicorn>=0.29.0
+gradio>=3.56.2
 
 # Optional RL integration
 gymnasium>=0.29.0
