@@ -14,6 +14,7 @@ client = OpenAI(
     base_url=API_BASE_URL,
     api_key=HF_TOKEN or "none"
 )
+)
 
 # ── Environment Space URL ─────────────────────────────────────────────
 # Replace with your actual deployed Space URL
