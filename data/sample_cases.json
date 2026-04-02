@@ -1,0 +1,1161 @@
+[
+  {
+    "AGE": 65,
+    "SEX": "M",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_12",
+      "E_10",
+      "E_2"
+    ],
+    "INITIAL_EVIDENCE": "E_12",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.805
+      ],
+      [
+        "Viral pharyngitis",
+        0.257
+      ]
+    ]
+  },
+  {
+    "AGE": 56,
+    "SEX": "M",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_2",
+      "E_10",
+      "E_42"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.753
+      ],
+      [
+        "Anemia",
+        0.127
+      ]
+    ]
+  },
+  {
+    "AGE": 27,
+    "SEX": "M",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_5",
+      "E_23",
+      "E_42"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.931
+      ],
+      [
+        "Pulmonary embolism",
+        0.086
+      ]
+    ]
+  },
+  {
+    "AGE": 69,
+    "SEX": "M",
+    "PATHOLOGY": "Anemia",
+    "EVIDENCES": [
+      "E_18",
+      "E_42",
+      "E_12"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Anemia",
+        0.828
+      ],
+      [
+        "Viral pharyngitis",
+        0.391
+      ]
+    ]
+  },
+  {
+    "AGE": 57,
+    "SEX": "F",
+    "PATHOLOGY": "Anemia",
+    "EVIDENCES": [
+      "E_42",
+      "E_12",
+      "E_23"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Anemia",
+        0.76
+      ],
+      [
+        "Viral pharyngitis",
+        0.066
+      ]
+    ]
+  },
+  {
+    "AGE": 47,
+    "SEX": "F",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_2",
+      "E_10",
+      "E_23",
+      "E_1",
+      "E_31"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.573
+      ],
+      [
+        "Pulmonary embolism",
+        0.123
+      ]
+    ]
+  },
+  {
+    "AGE": 77,
+    "SEX": "M",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_2",
+      "E_5",
+      "E_12",
+      "E_18",
+      "E_42",
+      "E_23",
+      "E_10",
+      "E_31"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.808
+      ],
+      [
+        "Pneumonia",
+        0.13
+      ]
+    ]
+  },
+  {
+    "AGE": 31,
+    "SEX": "F",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_23",
+      "E_12",
+      "E_1",
+      "E_2",
+      "E_31"
+    ],
+    "INITIAL_EVIDENCE": "E_1",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.678
+      ],
+      [
+        "GERD",
+        0.1
+      ]
+    ]
+  },
+  {
+    "AGE": 75,
+    "SEX": "F",
+    "PATHOLOGY": "Bronchitis",
+    "EVIDENCES": [
+      "E_42",
+      "E_12",
+      "E_18",
+      "E_31"
+    ],
+    "INITIAL_EVIDENCE": "E_31",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Bronchitis",
+        0.663
+      ],
+      [
+        "Bronchitis",
+        0.228
+      ]
+    ]
+  },
+  {
+    "AGE": 68,
+    "SEX": "F",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_2",
+      "E_5",
+      "E_18"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.768
+      ],
+      [
+        "Anemia",
+        0.184
+      ]
+    ]
+  },
+  {
+    "AGE": 25,
+    "SEX": "F",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_12",
+      "E_1",
+      "E_18",
+      "E_23",
+      "E_31",
+      "E_5",
+      "E_10"
+    ],
+    "INITIAL_EVIDENCE": "E_18",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.696
+      ],
+      [
+        "GERD",
+        0.051
+      ]
+    ]
+  },
+  {
+    "AGE": 66,
+    "SEX": "M",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_5",
+      "E_2",
+      "E_23",
+      "E_18",
+      "E_42",
+      "E_31",
+      "E_1"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.743
+      ],
+      [
+        "Pneumonia",
+        0.26
+      ]
+    ]
+  },
+  {
+    "AGE": 33,
+    "SEX": "M",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_2",
+      "E_18",
+      "E_23"
+    ],
+    "INITIAL_EVIDENCE": "E_18",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.608
+      ],
+      [
+        "Viral pharyngitis",
+        0.08
+      ]
+    ]
+  },
+  {
+    "AGE": 48,
+    "SEX": "M",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_42",
+      "E_5",
+      "E_2"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.619
+      ],
+      [
+        "Anemia",
+        0.388
+      ]
+    ]
+  },
+  {
+    "AGE": 33,
+    "SEX": "M",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_12",
+      "E_23",
+      "E_18",
+      "E_31",
+      "E_5",
+      "E_10",
+      "E_42",
+      "E_2"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.529
+      ],
+      [
+        "Pneumonia",
+        0.256
+      ]
+    ]
+  },
+  {
+    "AGE": 73,
+    "SEX": "F",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_10",
+      "E_1",
+      "E_31",
+      "E_18",
+      "E_23",
+      "E_2",
+      "E_12"
+    ],
+    "INITIAL_EVIDENCE": "E_10",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.532
+      ],
+      [
+        "Urinary tract infection",
+        0.147
+      ]
+    ]
+  },
+  {
+    "AGE": 33,
+    "SEX": "F",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_42",
+      "E_5",
+      "E_18",
+      "E_12"
+    ],
+    "INITIAL_EVIDENCE": "E_12",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.863
+      ],
+      [
+        "Urinary tract infection",
+        0.083
+      ]
+    ]
+  },
+  {
+    "AGE": 21,
+    "SEX": "F",
+    "PATHOLOGY": "Anemia",
+    "EVIDENCES": [
+      "E_23",
+      "E_42",
+      "E_10",
+      "E_18",
+      "E_1"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Anemia",
+        0.828
+      ],
+      [
+        "Viral pharyngitis",
+        0.137
+      ]
+    ]
+  },
+  {
+    "AGE": 77,
+    "SEX": "M",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_31",
+      "E_5",
+      "E_10",
+      "E_2",
+      "E_42",
+      "E_23",
+      "E_1"
+    ],
+    "INITIAL_EVIDENCE": "E_1",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.699
+      ],
+      [
+        "Viral pharyngitis",
+        0.068
+      ]
+    ]
+  },
+  {
+    "AGE": 48,
+    "SEX": "M",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_10",
+      "E_5",
+      "E_42"
+    ],
+    "INITIAL_EVIDENCE": "E_5",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.889
+      ],
+      [
+        "Pneumonia",
+        0.108
+      ]
+    ]
+  },
+  {
+    "AGE": 30,
+    "SEX": "F",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_12",
+      "E_31",
+      "E_5",
+      "E_10",
+      "E_42",
+      "E_18"
+    ],
+    "INITIAL_EVIDENCE": "E_31",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.598
+      ],
+      [
+        "Pneumonia",
+        0.253
+      ]
+    ]
+  },
+  {
+    "AGE": 22,
+    "SEX": "M",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_18",
+      "E_1",
+      "E_31",
+      "E_12",
+      "E_10",
+      "E_2",
+      "E_23",
+      "E_5"
+    ],
+    "INITIAL_EVIDENCE": "E_31",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.804
+      ],
+      [
+        "Urinary tract infection",
+        0.191
+      ]
+    ]
+  },
+  {
+    "AGE": 60,
+    "SEX": "F",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_1",
+      "E_2",
+      "E_10",
+      "E_18",
+      "E_12",
+      "E_5",
+      "E_31"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.607
+      ],
+      [
+        "Anemia",
+        0.096
+      ]
+    ]
+  },
+  {
+    "AGE": 52,
+    "SEX": "M",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_18",
+      "E_2",
+      "E_1",
+      "E_10",
+      "E_12",
+      "E_23"
+    ],
+    "INITIAL_EVIDENCE": "E_18",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.728
+      ],
+      [
+        "Bronchitis",
+        0.377
+      ]
+    ]
+  },
+  {
+    "AGE": 57,
+    "SEX": "M",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_18",
+      "E_12",
+      "E_2",
+      "E_10"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.801
+      ],
+      [
+        "Panic attack",
+        0.376
+      ]
+    ]
+  },
+  {
+    "AGE": 35,
+    "SEX": "F",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_12",
+      "E_2",
+      "E_1",
+      "E_18"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.772
+      ],
+      [
+        "Pulmonary embolism",
+        0.121
+      ]
+    ]
+  },
+  {
+    "AGE": 18,
+    "SEX": "F",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_31",
+      "E_12",
+      "E_23",
+      "E_1",
+      "E_18",
+      "E_10",
+      "E_2"
+    ],
+    "INITIAL_EVIDENCE": "E_31",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.847
+      ],
+      [
+        "Panic attack",
+        0.107
+      ]
+    ]
+  },
+  {
+    "AGE": 53,
+    "SEX": "M",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_23",
+      "E_1",
+      "E_31",
+      "E_42",
+      "E_2",
+      "E_18",
+      "E_12"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.693
+      ],
+      [
+        "Pneumonia",
+        0.158
+      ]
+    ]
+  },
+  {
+    "AGE": 74,
+    "SEX": "F",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_10",
+      "E_42",
+      "E_18",
+      "E_1",
+      "E_5"
+    ],
+    "INITIAL_EVIDENCE": "E_5",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.938
+      ],
+      [
+        "Bronchitis",
+        0.374
+      ]
+    ]
+  },
+  {
+    "AGE": 68,
+    "SEX": "F",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_5",
+      "E_23",
+      "E_1",
+      "E_2"
+    ],
+    "INITIAL_EVIDENCE": "E_1",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.861
+      ],
+      [
+        "Urinary tract infection",
+        0.143
+      ]
+    ]
+  },
+  {
+    "AGE": 70,
+    "SEX": "M",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_1",
+      "E_31",
+      "E_2",
+      "E_23",
+      "E_10",
+      "E_5"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.6
+      ],
+      [
+        "Urinary tract infection",
+        0.189
+      ]
+    ]
+  },
+  {
+    "AGE": 43,
+    "SEX": "F",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_12",
+      "E_18",
+      "E_31"
+    ],
+    "INITIAL_EVIDENCE": "E_31",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.923
+      ],
+      [
+        "Viral pharyngitis",
+        0.357
+      ]
+    ]
+  },
+  {
+    "AGE": 40,
+    "SEX": "F",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_12",
+      "E_1",
+      "E_31",
+      "E_42"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.696
+      ],
+      [
+        "Viral pharyngitis",
+        0.185
+      ]
+    ]
+  },
+  {
+    "AGE": 41,
+    "SEX": "F",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_1",
+      "E_23",
+      "E_42",
+      "E_12",
+      "E_18"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.531
+      ],
+      [
+        "Pulmonary embolism",
+        0.268
+      ]
+    ]
+  },
+  {
+    "AGE": 30,
+    "SEX": "F",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_12",
+      "E_42",
+      "E_18",
+      "E_10",
+      "E_5",
+      "E_23",
+      "E_31",
+      "E_2"
+    ],
+    "INITIAL_EVIDENCE": "E_18",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.799
+      ],
+      [
+        "Anemia",
+        0.287
+      ]
+    ]
+  },
+  {
+    "AGE": 68,
+    "SEX": "F",
+    "PATHOLOGY": "Bronchitis",
+    "EVIDENCES": [
+      "E_12",
+      "E_23",
+      "E_42",
+      "E_1",
+      "E_5",
+      "E_31",
+      "E_18"
+    ],
+    "INITIAL_EVIDENCE": "E_1",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Bronchitis",
+        0.709
+      ],
+      [
+        "GERD",
+        0.286
+      ]
+    ]
+  },
+  {
+    "AGE": 32,
+    "SEX": "M",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_5",
+      "E_2",
+      "E_42",
+      "E_12",
+      "E_18",
+      "E_23",
+      "E_1",
+      "E_10"
+    ],
+    "INITIAL_EVIDENCE": "E_18",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.566
+      ],
+      [
+        "Pneumonia",
+        0.136
+      ]
+    ]
+  },
+  {
+    "AGE": 42,
+    "SEX": "F",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_2",
+      "E_31",
+      "E_10",
+      "E_18",
+      "E_12",
+      "E_42",
+      "E_5"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.68
+      ],
+      [
+        "Bronchitis",
+        0.28
+      ]
+    ]
+  },
+  {
+    "AGE": 51,
+    "SEX": "F",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_23",
+      "E_10",
+      "E_2"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.523
+      ],
+      [
+        "Urinary tract infection",
+        0.371
+      ]
+    ]
+  },
+  {
+    "AGE": 57,
+    "SEX": "F",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_5",
+      "E_31",
+      "E_18",
+      "E_12",
+      "E_23",
+      "E_42"
+    ],
+    "INITIAL_EVIDENCE": "E_12",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.874
+      ],
+      [
+        "GERD",
+        0.364
+      ]
+    ]
+  },
+  {
+    "AGE": 33,
+    "SEX": "F",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_12",
+      "E_10",
+      "E_23",
+      "E_18",
+      "E_5",
+      "E_31"
+    ],
+    "INITIAL_EVIDENCE": "E_31",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.698
+      ],
+      [
+        "Panic attack",
+        0.132
+      ]
+    ]
+  },
+  {
+    "AGE": 62,
+    "SEX": "M",
+    "PATHOLOGY": "Pulmonary embolism",
+    "EVIDENCES": [
+      "E_42",
+      "E_2",
+      "E_31",
+      "E_23",
+      "E_18"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pulmonary embolism",
+        0.818
+      ],
+      [
+        "Viral pharyngitis",
+        0.195
+      ]
+    ]
+  },
+  {
+    "AGE": 19,
+    "SEX": "F",
+    "PATHOLOGY": "Pulmonary embolism",
+    "EVIDENCES": [
+      "E_31",
+      "E_23",
+      "E_1",
+      "E_2",
+      "E_10",
+      "E_12",
+      "E_5"
+    ],
+    "INITIAL_EVIDENCE": "E_12",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pulmonary embolism",
+        0.715
+      ],
+      [
+        "Pulmonary embolism",
+        0.155
+      ]
+    ]
+  },
+  {
+    "AGE": 19,
+    "SEX": "F",
+    "PATHOLOGY": "Anemia",
+    "EVIDENCES": [
+      "E_42",
+      "E_10",
+      "E_31",
+      "E_2",
+      "E_5",
+      "E_23"
+    ],
+    "INITIAL_EVIDENCE": "E_2",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Anemia",
+        0.651
+      ],
+      [
+        "Anemia",
+        0.303
+      ]
+    ]
+  },
+  {
+    "AGE": 23,
+    "SEX": "F",
+    "PATHOLOGY": "GERD",
+    "EVIDENCES": [
+      "E_42",
+      "E_1",
+      "E_10",
+      "E_12"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "GERD",
+        0.561
+      ],
+      [
+        "GERD",
+        0.114
+      ]
+    ]
+  },
+  {
+    "AGE": 66,
+    "SEX": "F",
+    "PATHOLOGY": "Panic attack",
+    "EVIDENCES": [
+      "E_18",
+      "E_10",
+      "E_31",
+      "E_5",
+      "E_42",
+      "E_23"
+    ],
+    "INITIAL_EVIDENCE": "E_31",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Panic attack",
+        0.614
+      ],
+      [
+        "Viral pharyngitis",
+        0.215
+      ]
+    ]
+  },
+  {
+    "AGE": 78,
+    "SEX": "M",
+    "PATHOLOGY": "Pneumonia",
+    "EVIDENCES": [
+      "E_10",
+      "E_2",
+      "E_23",
+      "E_18",
+      "E_1"
+    ],
+    "INITIAL_EVIDENCE": "E_10",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Pneumonia",
+        0.59
+      ],
+      [
+        "Pneumonia",
+        0.267
+      ]
+    ]
+  },
+  {
+    "AGE": 62,
+    "SEX": "F",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_31",
+      "E_2",
+      "E_12",
+      "E_42"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.845
+      ],
+      [
+        "Bronchitis",
+        0.262
+      ]
+    ]
+  },
+  {
+    "AGE": 54,
+    "SEX": "F",
+    "PATHOLOGY": "Viral pharyngitis",
+    "EVIDENCES": [
+      "E_12",
+      "E_2",
+      "E_42",
+      "E_1"
+    ],
+    "INITIAL_EVIDENCE": "E_42",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Viral pharyngitis",
+        0.678
+      ],
+      [
+        "Urinary tract infection",
+        0.077
+      ]
+    ]
+  },
+  {
+    "AGE": 68,
+    "SEX": "M",
+    "PATHOLOGY": "Urinary tract infection",
+    "EVIDENCES": [
+      "E_12",
+      "E_2",
+      "E_23"
+    ],
+    "INITIAL_EVIDENCE": "E_23",
+    "DIFFERENTIAL_DIAGNOSIS": [
+      [
+        "Urinary tract infection",
+        0.656
+      ],
+      [
+        "Anemia",
+        0.282
+      ]
+    ]
+  }
+]

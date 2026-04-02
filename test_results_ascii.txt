@@ -1,0 +1,4 @@
+STEP C PASS: ['stage', 'chief_complaint', 'vitals', 'patient_profile', 'available_actions', 'task_description', 'message']
+STEP D PASS: terminated= False observation= Triage complete. Urgency classified as: standard
+STEP E PASS: terminated= False reward= 0.0 observation= Symptom fever: unknown
+STEP F PASS: keys= ['current_stage', 'episode_step_count', 'symptoms_queried', 'tests_ordered', 'test_budget_remaining', 'current_diagnosis', 'diagnosis_confidence', 'treatment_given', 'followup_days', 'red_flag_status', 'specialist_activated', 'specialist_diagnosis', 'specialist_treatment', 'actions_taken']
