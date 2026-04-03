@@ -1,7 +1,13 @@
+import os
+import json
+import gradio as gr
+import uvicorn
+from fastapi import FastAPI
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
+from typing import Any
 import logging
 from pprint import pformat
-
-import gradio as gr
 
 from env.medenv import MedEnv
 
@@ -11,7 +17,57 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 
+# ── Lazy env singleton ────────────────────────────────────────────────
+_env: MedEnv | None = None
 
+def get_env() -> MedEnv:
+    global _env
+    if _env is None:
+        _env = MedEnv()
+    return _env
+
+# ── FastAPI app ───────────────────────────────────────────────────────
+app = FastAPI(title="MedAgent-Env", version="1.0.0")
+
+# ── Request schemas ───────────────────────────────────────────────────
+class ResetRequest(BaseModel):
+    seed: int | None = None
+
+class StepRequest(BaseModel):
+    action_type: str
+    payload: dict[str, Any] = {}
+
+# ── REST API endpoints ────────────────────────────────────────────────
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+@app.post("/reset")
+def reset_env(request: ResetRequest | None = None):
+    seed = request.seed if request else None
+    obs = get_env().reset(seed=seed)
+    return dict(obs)
+
+@app.post("/step")
+def step_env(request: StepRequest):
+    action = {
+        "action_type": request.action_type,
+        "payload": request.payload
+    }
+    obs, reward, terminated, truncated, info = get_env().step(action)
+    return {
+        "observation": obs,
+        "reward": float(reward),
+        "terminated": bool(terminated),
+        "truncated": bool(truncated),
+        "info": info
+    }
+
+@app.get("/state")
+def state_env():
+    return get_env().state()
+
+# ── Gradio UI ─────────────────────────────────────────────────────────
 def run_demo_episode(seed: int = 42) -> str:
     """Run a deterministic MedAgent episode and return a text log for UI."""
     env = MedEnv(seed=seed)
@@ -56,19 +112,25 @@ def get_state() -> str:
     return pformat(env.state())
 
 
-with gr.Blocks(title="MedAgent-Env (HuggingFace Spaces)") as demo:
-    gr.Markdown("## MedAgent-Env sample run\nA deterministic clinical pipeline episode, ready for HuggingFace Spaces.")
+def build_gradio_ui() -> gr.Blocks:
+    with gr.Blocks(title="MedAgent-Env (HuggingFace Spaces)") as demo:
+        gr.Markdown("## MedAgent-Env sample run\nA deterministic clinical pipeline episode, ready for HuggingFace Spaces.")
 
-    output_text = gr.Textbox(lines=20, label="Episode Log")
+        output_text = gr.Textbox(lines=20, label="Episode Log")
 
-    run_button = gr.Button("Run deterministic episode")
-    run_button.click(fn=run_demo_episode, inputs=[], outputs=[output_text])
+        run_button = gr.Button("Run deterministic episode")
+        run_button.click(fn=run_demo_episode, inputs=[], outputs=[output_text])
 
-    state_button = gr.Button("Show base environment state")
-    state_button.click(fn=get_state, inputs=[], outputs=[output_text])
+        state_button = gr.Button("Show base environment state")
+        state_button.click(fn=get_state, inputs=[], outputs=[output_text])
 
-    gr.Markdown("---\n`requirements.txt` should include gradio, plus the existing runtime deps.")
+        gr.Markdown("---\n`requirements.txt` should include gradio, plus the existing runtime deps.")
+    return demo
 
+# Mount Gradio at /ui — does NOT interfere with /reset or /step
+gradio_app = build_gradio_ui()
+app = gr.mount_gradio_app(app, gradio_app, path="/ui")
 
+# ── Entry point ───────────────────────────────────────────────────────
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860, debug=False)
+    uvicorn.run(app, host="0.0.0.0", port=7860)
